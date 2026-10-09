@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:07,000
+VNBank-LOD is a five-star Linked Open Data dataset of Vietnamese banks, developed by Group 24.
+
+2
+00:00:07,000 --> 00:00:14,000
+The project follows all five steps, from ontology design and data collection to interlinking and querying.
+
+3
+00:00:14,000 --> 00:00:21,000
+The dataset covers thirty banks and combines public sources with manual verification against official bank websites.
+
+4
+00:00:21,000 --> 00:00:28,000
+Every external link records its verification method, evidence and confidence level.
+
+5
+00:00:28,000 --> 00:00:35,000
+The original ontology graph visualises the schema, defined classes, datatypes and schema.org alignment.
+
+6
+00:00:35,000 --> 00:00:42,000
+The original instance graph shows ACB and Vietcombank connected to types, locations, services and external resources.
+
+7
+00:00:42,000 --> 00:00:49,000
+The overview graph connects all thirty banks with inferred categories and headquarters locations.
+
+8
+00:00:49,000 --> 00:00:56,000
+This Protégé class hierarchy confirms that the ontology and schema.org alignment were edited and inspected directly.
+
+9
+00:00:56,000 --> 00:01:03,000
+With the HermiT reasoner active, the defined DigitalBank class is classified from its equivalent class expression.
+
+10
+00:01:03,000 --> 00:01:10,000
+The inverseOf axiom explicitly connects isHeadquartersOf with hasHeadquarters.
+
+11
+00:01:10,000 --> 00:01:17,000
+Show Inferences reveals service-to-bank assertions inferred from the inverse property model.
+
+12
+00:01:17,000 --> 00:01:25,000
+The script loads the Turtle file, runs OWL RL reasoning, every quality check and two sample queries.
+
+13
+00:01:25,000 --> 00:01:30,000
+Q1 lists all thirty banks with bilingual names.
+
+14
+00:01:30,000 --> 00:01:35,000
+Q2 retrieves state-owned commercial banks through inferred class membership.
+
+15
+00:01:35,000 --> 00:01:40,000
+Q3 returns the twenty banks headquartered in Hanoi without duplicate external IRIs.
+
+16
+00:01:40,000 --> 00:01:45,000
+Q4 identifies banks classified as digital banks.
+
+17
+00:01:45,000 --> 00:01:50,000
+Q5 uses a datatype filter to find banks established before 1991.
+
+18
+00:01:50,000 --> 00:01:55,000
+Q6 lists verified owl:sameAs links to Wikidata and DBpedia.
+
+19
+00:01:55,000 --> 00:02:00,000
+Q7 demonstrates inverse reasoning from services back to their providers.
+
+20
+00:02:00,000 --> 00:02:05,000
+Q8 demonstrates inverse headquarters reasoning and returns twenty Hanoi banks.
+
+21
+00:02:05,000 --> 00:02:10,000
+Q9 uses COUNT, GROUP BY and ORDER BY to aggregate banks by type.
+
+22
+00:02:10,000 --> 00:02:15,000
+Q10 uses ASK and confirms that external Linked Data connections exist.
+
+23
+00:02:15,000 --> 00:02:20,000
+Q11 uses CONSTRUCT to create a reusable bank-service subgraph.
+
+24
+00:02:20,000 --> 00:02:25,000
+Q12 uses FILTER NOT EXISTS to find banks lacking external links.
+
+25
+00:02:25,000 --> 00:02:30,000
+Q13 uses UNION to combine state-owned and foreign-owned bank categories.
+
+26
+00:02:30,000 --> 00:02:35,000
+Q14 uses DESCRIBE to export the complete local description of ACB.
+
+27
+00:02:35,000 --> 00:02:40,000
+Q15 uses SERVICE to retrieve English labels and inception dates from Wikidata.
+
+28
+00:02:40,000 --> 00:02:45,000
+Q16 is typed freely into the SPARQL terminal and counts banks by headquarters city.
+
+29
+00:02:45,000 --> 00:02:55,000
+The final dataset contains thirty banks, thirty-eight external links, sixteen demonstrated queries and zero quality violations.
+
+30
+00:02:55,000 --> 00:03:05,000
+VNBank-LOD demonstrates semantic modelling, automated inference and operational five-star data integration.
