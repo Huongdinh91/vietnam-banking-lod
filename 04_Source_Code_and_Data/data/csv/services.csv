@@ -1,0 +1,10 @@
+﻿service_id,internal_uri,label_vi,label_en
+card,https://data.example.org/vietnam-banking/service/card,Thẻ ngân hàng,Card services
+corporate-banking,https://data.example.org/vietnam-banking/service/corporate-banking,Ngân hàng doanh nghiệp,Corporate banking
+deposit-savings,https://data.example.org/vietnam-banking/service/deposit-savings,Tiền gửi và tiết kiệm,Deposits and savings
+development-finance,https://data.example.org/vietnam-banking/service/development-finance,Tín dụng đầu tư phát triển,Development finance
+digital-banking,https://data.example.org/vietnam-banking/service/digital-banking,Ngân hàng số,Digital banking
+payment-transfer,https://data.example.org/vietnam-banking/service/payment-transfer,Thanh toán và chuyển tiền,Payments and transfers
+policy-lending,https://data.example.org/vietnam-banking/service/policy-lending,Tín dụng chính sách,Policy lending
+retail-loan,https://data.example.org/vietnam-banking/service/retail-loan,Cho vay bán lẻ,Retail lending
+trade-finance,https://data.example.org/vietnam-banking/service/trade-finance,Tài trợ thương mại,Trade finance

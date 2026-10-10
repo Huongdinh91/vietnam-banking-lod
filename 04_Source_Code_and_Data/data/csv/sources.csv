@@ -1,0 +1,5 @@
+﻿source_id,title,url,used_for,license,retrieved_date
+SRC_WIKI_BANK_LIST,List of banks in Vietnam,https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam,"Tên, loại, trụ sở, website",CC BY-SA 4.0,2026-10-06
+SRC_WIKIDATA,Wikidata,https://www.wikidata.org/,IRI thực thể (owl:sameAs),CC0 1.0,2026-10-09
+SRC_DBPEDIA,DBpedia,https://www.dbpedia.org/,IRI thực thể (owl:sameAs),CC BY-SA,2026-10-06
+SRC_OFFICIAL_WEBSITES,Website chính thức của ngân hàng,(cột official_website),Website; ánh xạ dịch vụ khởi đầu,Chỉ trích dẫn dữ kiện,2026-10-06

@@ -1,0 +1,4 @@
+﻿location_id,internal_uri,name_vi,name_en,wikidata_uri,dbpedia_uri,banks_headquartered
+hanoi,https://data.example.org/vietnam-banking/location/hanoi,Hà Nội,Hanoi,http://www.wikidata.org/entity/Q1858,http://dbpedia.org/resource/Hanoi,20
+ho-chi-minh-city,https://data.example.org/vietnam-banking/location/ho-chi-minh-city,Thành phố Hồ Chí Minh,Ho Chi Minh City,http://www.wikidata.org/entity/Q1854,http://dbpedia.org/resource/Ho_Chi_Minh_City,10
+vietnam,https://data.example.org/vietnam-banking/location/vietnam,Việt Nam,Vietnam,http://www.wikidata.org/entity/Q881,http://dbpedia.org/resource/Vietnam,0

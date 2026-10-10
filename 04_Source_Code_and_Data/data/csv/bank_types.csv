@@ -1,0 +1,6 @@
+﻿bank_type_id,internal_uri,label_vi,label_en,comment_vi,bank_count
+foreign-owned,https://data.example.org/vietnam-banking/bank-type/foreign-owned,Ngân hàng 100% vốn nước ngoài,Wholly foreign-owned bank,,1
+joint-stock-commercial,https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial,Ngân hàng thương mại cổ phần,Joint-stock commercial bank,,20
+policy-bank,https://data.example.org/vietnam-banking/bank-type/policy-bank,Ngân hàng chính sách,Policy bank,,2
+private-domestic-commercial,https://data.example.org/vietnam-banking/bank-type/private-domestic-commercial,Ngân hàng thương mại trong nước thuộc sở hữu tư nhân,Privately owned domestic commercial bank,"Ngân hàng thương mại TNHH MTV trong nước do một NHTM cổ phần sở hữu sau chuyển giao bắt buộc (MBV thuộc MB, GPBank thuộc VPBank).",2
+state-commercial,https://data.example.org/vietnam-banking/bank-type/state-commercial,Ngân hàng thương mại nhà nước/chi phối,State-owned or state-controlled commercial bank,,5
