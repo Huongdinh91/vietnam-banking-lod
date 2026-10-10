@@ -1,0 +1,321 @@
+@prefix schema: <https://schema.org/> .
+
+<https://data.example.org/vietnam-banking/bank/abbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "An Binh Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/acb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Asia Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/agribank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Bank for Agriculture and Rural Development"@en .
+
+<https://data.example.org/vietnam-banking/bank/bacabank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Bac A Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/bidv> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Joint Stock Commercial Bank for Investment and Development of Vietnam"@en .
+
+<https://data.example.org/vietnam-banking/bank/eximbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Export Import Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/gpbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Generation of Prosperity Sole Member Limited Commercial Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/hdbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Ho Chi Minh City Development Joint Stock Commercial Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/lpbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Fortune Vietnam Joint Stock Commercial Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/mbbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Military Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/mbv> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Modern Bank of Vietnam"@en .
+
+<https://data.example.org/vietnam-banking/bank/msb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Maritime Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/namabank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Nam A Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/ncb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "National Citizen Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/ocb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Orient Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/pvcombank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Public Joint Stock Commercial Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/sacombank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Saigon Thuong Tin Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/scb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Saigon Joint Stock Commercial Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/seabank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Southeast Asia Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/shb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Saigon-Hanoi Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/shinhanvn> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Shinhan Bank Vietnam Limited"@en .
+
+<https://data.example.org/vietnam-banking/bank/techcombank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Technological and Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/tpbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Tien Phong Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/vbsp> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/policy-lending> ;
+    schema:name "Vietnam Bank for Social Policies"@en .
+
+<https://data.example.org/vietnam-banking/bank/vcbneo> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietcombank Neo"@en .
+
+<https://data.example.org/vietnam-banking/bank/vdb> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/development-finance>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Development Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/vib> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam International Commercial Joint Stock Bank"@en .
+
+<https://data.example.org/vietnam-banking/bank/vietcombank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Joint Stock Commercial Bank for Foreign Trade of Vietnam"@en .
+
+<https://data.example.org/vietnam-banking/bank/vietinbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Joint Stock Commercial Bank for Industry and Trade"@en .
+
+<https://data.example.org/vietnam-banking/bank/vpbank> a schema:BankOrCreditUnion ;
+    schema:makesOffer <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    schema:name "Vietnam Prosperity Joint Stock Commercial Bank"@en .
+
+<https://data.example.org/vietnam-banking/service/development-finance> a schema:Service ;
+    schema:name "Development finance"@en .
+
+<https://data.example.org/vietnam-banking/service/policy-lending> a schema:Service ;
+    schema:name "Policy lending"@en .
+
+<https://data.example.org/vietnam-banking/service/card> a schema:Service ;
+    schema:name "Card services"@en .
+
+<https://data.example.org/vietnam-banking/service/digital-banking> a schema:Service ;
+    schema:name "Digital banking"@en .
+
+<https://data.example.org/vietnam-banking/service/retail-loan> a schema:Service ;
+    schema:name "Retail lending"@en .
+
+<https://data.example.org/vietnam-banking/service/corporate-banking> a schema:Service ;
+    schema:name "Corporate banking"@en .
+
+<https://data.example.org/vietnam-banking/service/deposit-savings> a schema:Service ;
+    schema:name "Deposits and savings"@en .
+
+<https://data.example.org/vietnam-banking/service/payment-transfer> a schema:Service ;
+    schema:name "Payments and transfers"@en .
+
+<https://data.example.org/vietnam-banking/service/trade-finance> a schema:Service ;
+    schema:name "Trade finance"@en .
+

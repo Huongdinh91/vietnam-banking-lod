@@ -1,0 +1,35 @@
+@prefix : <https://data.example.org/vietnam-banking/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.example.org/vietnam-banking/bank/acb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Asia Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Á Châu"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Asia_Commercial_Bank>,
+        <http://www.wikidata.org/entity/Q727019> ;
+    :abbreviation "ACB" ;
+    :bankId "ACB" ;
+    :foundedYear 1993 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Asia Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Á Châu"@vi ;
+    :officialWebsite "https://www.acb.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Asia Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Á Châu"@vi ;
+    schema:url <https://www.acb.com.vn/> .
+

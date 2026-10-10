@@ -1,0 +1,1 @@
+ASK: dataset has owl:sameAs links to Wikidata/DBpedia = True
