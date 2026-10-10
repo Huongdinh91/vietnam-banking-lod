@@ -1,0 +1,1121 @@
+@prefix : <https://data.example.org/vietnam-banking/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/resource/Sacombank> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Vietnam_International_Commercial_Joint_Stock_Bank> a owl:NamedIndividual .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+: a owl:Ontology ;
+    dcterms:created "2026-10-06"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    dcterms:title "Vietnam Banking Linked Open Data Ontology"@en .
+
+:DigitalBank a owl:Class ;
+    rdfs:subClassOf :Bank ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Bank [ a owl:Restriction ;
+                        owl:hasValue <https://data.example.org/vietnam-banking/service/digital-banking> ;
+                        owl:onProperty :providesService ] ) ] .
+
+:EstablishedBefore1991Bank a owl:Class ;
+    rdfs:subClassOf :Bank ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Bank [ a owl:Restriction ;
+                        owl:onProperty :foundedYear ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:maxInclusive 1990 ] ) ] ] ) ] .
+
+:ForeignBank a owl:Class ;
+    rdfs:subClassOf :Bank ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Bank [ a owl:Restriction ;
+                        owl:hasValue <https://data.example.org/vietnam-banking/bank-type/foreign-owned> ;
+                        owl:onProperty :hasBankType ] ) ] .
+
+:JointStockBank a owl:Class ;
+    rdfs:subClassOf :Bank ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Bank [ a owl:Restriction ;
+                        owl:hasValue <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+                        owl:onProperty :hasBankType ] ) ] .
+
+:StateOwnedBank a owl:Class ;
+    rdfs:subClassOf :Bank ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Bank [ a owl:Restriction ;
+                        owl:hasValue <https://data.example.org/vietnam-banking/bank-type/state-commercial> ;
+                        owl:onProperty :hasBankType ] ) ] .
+
+:abbreviation a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range xsd:string .
+
+<https://data.example.org/vietnam-banking/bank/abbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "An Binh Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP An Bình"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "ABBank" ;
+    :bankId "ABBANK" ;
+    :foundedYear 1993 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "An Binh Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP An Bình"@vi ;
+    :officialWebsite "https://abbank.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "An Binh Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP An Bình"@vi ;
+    schema:url <https://abbank.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/acb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Asia Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Á Châu"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Asia_Commercial_Bank>,
+        <http://www.wikidata.org/entity/Q727019> ;
+    :abbreviation "ACB" ;
+    :bankId "ACB" ;
+    :foundedYear 1993 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Asia Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Á Châu"@vi ;
+    :officialWebsite "https://www.acb.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Asia Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Á Châu"@vi ;
+    schema:url <https://www.acb.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/agribank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Bank for Agriculture and Rural Development"@en,
+        "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Agribank_(Vietnam)>,
+        <http://www.wikidata.org/entity/Q1924723> ;
+    :abbreviation "Agribank" ;
+    :bankId "AGRIBANK" ;
+    :foundedYear 1988 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/state-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Bank for Agriculture and Rural Development"@en ;
+    :nameVi "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"@vi ;
+    :officialWebsite "https://www.agribank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Bank for Agriculture and Rural Development"@en,
+        "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"@vi ;
+    schema:url <https://www.agribank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/bacabank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Bac A Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Bắc Á"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "Bac A Bank" ;
+    :bankId "BACABANK" ;
+    :foundedYear 1994 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Bac A Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Bắc Á"@vi ;
+    :officialWebsite "https://www.baca-bank.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Bac A Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Bắc Á"@vi ;
+    schema:url <https://www.baca-bank.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/bidv> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Joint Stock Commercial Bank for Investment and Development of Vietnam"@en,
+        "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Bank_for_Investment_and_Development_of_Vietnam>,
+        <http://www.wikidata.org/entity/Q1003180> ;
+    :abbreviation "BIDV" ;
+    :bankId "BIDV" ;
+    :foundedYear 1957 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/state-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Joint Stock Commercial Bank for Investment and Development of Vietnam"@en ;
+    :nameVi "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"@vi ;
+    :officialWebsite "https://www.bidv.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Joint Stock Commercial Bank for Investment and Development of Vietnam"@en,
+        "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"@vi ;
+    schema:url <https://www.bidv.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/eximbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Export Import Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Xuất Nhập khẩu Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "Eximbank" ;
+    :bankId "EXIMBANK" ;
+    :foundedYear 1989 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Vietnam Export Import Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Xuất Nhập khẩu Việt Nam"@vi ;
+    :officialWebsite "https://eximbank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Export Import Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Xuất Nhập khẩu Việt Nam"@vi ;
+    schema:url <https://eximbank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/gpbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Generation of Prosperity Sole Member Limited Commercial Bank"@en,
+        "Ngân hàng Thương mại TNHH MTV Kỷ Nguyên Thịnh Vượng"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "GPBank" ;
+    :bankId "GPBANK" ;
+    :foundedYear 1993 ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Generation of Prosperity Sole Member Limited Commercial Bank"@en ;
+    :nameVi "Ngân hàng Thương mại TNHH MTV Kỷ Nguyên Thịnh Vượng"@vi ;
+    :officialWebsite "https://www.gpbank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Generation of Prosperity Sole Member Limited Commercial Bank"@en,
+        "Ngân hàng Thương mại TNHH MTV Kỷ Nguyên Thịnh Vượng"@vi ;
+    schema:url <https://www.gpbank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/hdbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Ho Chi Minh City Development Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Phát triển Thành phố Hồ Chí Minh"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "HDBank" ;
+    :bankId "HDBANK" ;
+    :foundedYear 1990 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Ho Chi Minh City Development Joint Stock Commercial Bank"@en ;
+    :nameVi "Ngân hàng TMCP Phát triển Thành phố Hồ Chí Minh"@vi ;
+    :officialWebsite "https://hdbank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Ho Chi Minh City Development Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Phát triển Thành phố Hồ Chí Minh"@vi ;
+    schema:url <https://hdbank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/lpbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Fortune Vietnam Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Lộc Phát Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "LPBank" ;
+    :bankId "LPBANK" ;
+    :foundedYear 2008 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Fortune Vietnam Joint Stock Commercial Bank"@en ;
+    :nameVi "Ngân hàng TMCP Lộc Phát Việt Nam"@vi ;
+    :officialWebsite "https://lpbank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Fortune Vietnam Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Lộc Phát Việt Nam"@vi ;
+    schema:url <https://lpbank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/mbbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Military Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Quân đội"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "MBBank" ;
+    :bankId "MBBANK" ;
+    :foundedYear 1994 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Military Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Quân đội"@vi ;
+    :officialWebsite "https://www.mbbank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Military Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Quân đội"@vi ;
+    schema:url <https://www.mbbank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/mbv> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Modern Bank of Vietnam"@en,
+        "Ngân hàng TNHH MTV Việt Nam Hiện Đại"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "MBV" ;
+    :bankId "MBV" ;
+    :foundedYear 2025 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/private-domestic-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Modern Bank of Vietnam"@en ;
+    :nameVi "Ngân hàng TNHH MTV Việt Nam Hiện Đại"@vi ;
+    :officialWebsite "https://mbv.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Modern Bank of Vietnam"@en,
+        "Ngân hàng TNHH MTV Việt Nam Hiện Đại"@vi ;
+    schema:url <https://mbv.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/msb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Maritime Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Hàng Hải Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "MSB" ;
+    :bankId "MSB" ;
+    :foundedYear 1991 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Maritime Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Hàng Hải Việt Nam"@vi ;
+    :officialWebsite "https://www.msb.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Maritime Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Hàng Hải Việt Nam"@vi ;
+    schema:url <https://www.msb.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/namabank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Nam A Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Nam Á"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "Nam A Bank" ;
+    :bankId "NAMABANK" ;
+    :foundedYear 1992 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Nam A Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Nam Á"@vi ;
+    :officialWebsite "https://www.namabank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Nam A Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Nam Á"@vi ;
+    schema:url <https://www.namabank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/ncb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "National Citizen Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Quốc Dân"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "NCB" ;
+    :bankId "NCB" ;
+    :foundedYear 1995 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "National Citizen Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Quốc Dân"@vi ;
+    :officialWebsite "https://www.ncb-bank.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "National Citizen Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Quốc Dân"@vi ;
+    schema:url <https://www.ncb-bank.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/ocb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Orient Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Phương Đông"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Orient_Commercial_Joint_Stock_Bank>,
+        <http://www.wikidata.org/entity/Q7102288> ;
+    :abbreviation "OCB" ;
+    :bankId "OCB" ;
+    :foundedYear 1996 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Orient Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Phương Đông"@vi ;
+    :officialWebsite "https://www.ocb.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Orient Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Phương Đông"@vi ;
+    schema:url <https://www.ocb.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/pvcombank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Public Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Đại Chúng Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "PVcomBank" ;
+    :bankId "PVCOMBANK" ;
+    :foundedYear 2013 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Public Joint Stock Commercial Bank"@en ;
+    :nameVi "Ngân hàng TMCP Đại Chúng Việt Nam"@vi ;
+    :officialWebsite "https://www.pvcombank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Public Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Đại Chúng Việt Nam"@vi ;
+    schema:url <https://www.pvcombank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/sacombank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Saigon Thuong Tin Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Sài Gòn Thương Tín"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6123772> ;
+    :abbreviation "Sacombank" ;
+    :bankId "SACOMBANK" ;
+    :foundedYear 1991 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Saigon Thuong Tin Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Sài Gòn Thương Tín"@vi ;
+    :officialWebsite "https://www.sacombank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Saigon Thuong Tin Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Sài Gòn Thương Tín"@vi ;
+    schema:url <https://www.sacombank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/scb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Saigon Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Sài Gòn"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "SCB" ;
+    :bankId "SCB" ;
+    :foundedYear 2012 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Saigon Joint Stock Commercial Bank"@en ;
+    :nameVi "Ngân hàng TMCP Sài Gòn"@vi ;
+    :officialWebsite "https://www.scb.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Saigon Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Sài Gòn"@vi ;
+    schema:url <https://www.scb.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/seabank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Southeast Asia Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Đông Nam Á"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "SeABank" ;
+    :bankId "SEABANK" ;
+    :foundedYear 1994 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Southeast Asia Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Đông Nam Á"@vi ;
+    :officialWebsite "https://www.seabank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Southeast Asia Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Đông Nam Á"@vi ;
+    schema:url <https://www.seabank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/shb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Saigon-Hanoi Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Sài Gòn - Hà Nội"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q124465825> ;
+    :abbreviation "SHB" ;
+    :bankId "SHB" ;
+    :foundedYear 1993 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Saigon-Hanoi Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Sài Gòn - Hà Nội"@vi ;
+    :officialWebsite "https://www.shb.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Saigon-Hanoi Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Sài Gòn - Hà Nội"@vi ;
+    schema:url <https://www.shb.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/shinhanvn> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Shinhan Bank Vietnam Limited"@en,
+        "Ngân hàng TNHH MTV Shinhan Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "Shinhan Bank Vietnam" ;
+    :bankId "SHINHANVN" ;
+    :foundedYear 2008 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/foreign-owned> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Shinhan Bank Vietnam Limited"@en ;
+    :nameVi "Ngân hàng TNHH MTV Shinhan Việt Nam"@vi ;
+    :officialWebsite "https://shinhan.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Shinhan Bank Vietnam Limited"@en,
+        "Ngân hàng TNHH MTV Shinhan Việt Nam"@vi ;
+    schema:url <https://shinhan.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/techcombank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Technological and Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Kỹ thương Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Techcombank>,
+        <http://www.wikidata.org/entity/Q10541776> ;
+    :abbreviation "Techcombank" ;
+    :bankId "TECHCOMBANK" ;
+    :foundedYear 1993 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Technological and Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Kỹ thương Việt Nam"@vi ;
+    :officialWebsite "https://techcombank.com/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Technological and Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Kỹ thương Việt Nam"@vi ;
+    schema:url <https://techcombank.com/> .
+
+<https://data.example.org/vietnam-banking/bank/tpbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Tien Phong Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Tiên Phong"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "TPBank" ;
+    :bankId "TPBANK" ;
+    :foundedYear 2008 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Tien Phong Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Tiên Phong"@vi ;
+    :officialWebsite "https://tpb.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Tien Phong Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Tiên Phong"@vi ;
+    schema:url <https://tpb.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vbsp> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Bank for Social Policies"@en,
+        "Ngân hàng Chính sách Xã hội Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "VBSP" ;
+    :bankId "VBSP" ;
+    :foundedYear 2002 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/policy-bank> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Bank for Social Policies"@en ;
+    :nameVi "Ngân hàng Chính sách Xã hội Việt Nam"@vi ;
+    :officialWebsite "https://vbsp.org.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/policy-lending> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Bank for Social Policies"@en,
+        "Ngân hàng Chính sách Xã hội Việt Nam"@vi ;
+    schema:url <https://vbsp.org.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vcbneo> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietcombank Neo"@en,
+        "Ngân hàng TNHH MTV Ngoại thương Công nghệ số"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "VCBNeo" ;
+    :bankId "VCBNEO" ;
+    :foundedYear 2025 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/state-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Vietcombank Neo"@en ;
+    :nameVi "Ngân hàng TNHH MTV Ngoại thương Công nghệ số"@vi ;
+    :officialWebsite "https://vcbneo.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietcombank Neo"@en,
+        "Ngân hàng TNHH MTV Ngoại thương Công nghệ số"@vi ;
+    schema:url <https://vcbneo.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vdb> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Development Bank"@en,
+        "Ngân hàng Phát triển Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "VDB" ;
+    :bankId "VDB" ;
+    :foundedYear 2006 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/policy-bank> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Development Bank"@en ;
+    :nameVi "Ngân hàng Phát triển Việt Nam"@vi ;
+    :officialWebsite "https://vdb.gov.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/development-finance>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Development Bank"@en,
+        "Ngân hàng Phát triển Việt Nam"@vi ;
+    schema:url <https://vdb.gov.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vib> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam International Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Quốc tế Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "VIB" ;
+    :bankId "VIB" ;
+    :foundedYear 1996 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/ho-chi-minh-city> ;
+    :nameEn "Vietnam International Commercial Joint Stock Bank"@en ;
+    :nameVi "Ngân hàng TMCP Quốc tế Việt Nam"@vi ;
+    :officialWebsite "https://www.vib.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam International Commercial Joint Stock Bank"@en,
+        "Ngân hàng TMCP Quốc tế Việt Nam"@vi ;
+    schema:url <https://www.vib.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vietcombank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Joint Stock Commercial Bank for Foreign Trade of Vietnam"@en,
+        "Ngân hàng TMCP Ngoại thương Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Vietcombank>,
+        <http://www.wikidata.org/entity/Q6122995> ;
+    :abbreviation "Vietcombank" ;
+    :bankId "VIETCOMBANK" ;
+    :foundedYear 1963 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/state-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Joint Stock Commercial Bank for Foreign Trade of Vietnam"@en ;
+    :nameVi "Ngân hàng TMCP Ngoại thương Việt Nam"@vi ;
+    :officialWebsite "https://www.vietcombank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Joint Stock Commercial Bank for Foreign Trade of Vietnam"@en,
+        "Ngân hàng TMCP Ngoại thương Việt Nam"@vi ;
+    schema:url <https://www.vietcombank.com.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vietinbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Joint Stock Commercial Bank for Industry and Trade"@en,
+        "Ngân hàng TMCP Công thương Việt Nam"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    owl:sameAs <http://dbpedia.org/resource/Vietinbank>,
+        <http://www.wikidata.org/entity/Q7928459> ;
+    :abbreviation "VietinBank" ;
+    :bankId "VIETINBANK" ;
+    :foundedYear 1988 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/state-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Joint Stock Commercial Bank for Industry and Trade"@en ;
+    :nameVi "Ngân hàng TMCP Công thương Việt Nam"@vi ;
+    :officialWebsite "https://www.vietinbank.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Joint Stock Commercial Bank for Industry and Trade"@en,
+        "Ngân hàng TMCP Công thương Việt Nam"@vi ;
+    schema:url <https://www.vietinbank.vn/> .
+
+<https://data.example.org/vietnam-banking/bank/vpbank> a owl:NamedIndividual,
+        :Bank ;
+    rdfs:label "Vietnam Prosperity Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Việt Nam Thịnh Vượng"@vi ;
+    dcterms:source <https://en.wikipedia.org/wiki/List_of_banks_in_Vietnam> ;
+    :abbreviation "VPBank" ;
+    :bankId "VPBANK" ;
+    :foundedYear 1993 ;
+    :hasBankType <https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> ;
+    :hasHeadquarters <https://data.example.org/vietnam-banking/location/hanoi> ;
+    :nameEn "Vietnam Prosperity Joint Stock Commercial Bank"@en ;
+    :nameVi "Ngân hàng TMCP Việt Nam Thịnh Vượng"@vi ;
+    :officialWebsite "https://www.vpbank.com.vn/"^^xsd:anyURI ;
+    :operatesInCountry <https://data.example.org/vietnam-banking/location/vietnam> ;
+    :providesService <https://data.example.org/vietnam-banking/service/card>,
+        <https://data.example.org/vietnam-banking/service/corporate-banking>,
+        <https://data.example.org/vietnam-banking/service/deposit-savings>,
+        <https://data.example.org/vietnam-banking/service/digital-banking>,
+        <https://data.example.org/vietnam-banking/service/payment-transfer>,
+        <https://data.example.org/vietnam-banking/service/retail-loan>,
+        <https://data.example.org/vietnam-banking/service/trade-finance> ;
+    :retrievedDate "2026-10-06"^^xsd:date ;
+    schema:name "Vietnam Prosperity Joint Stock Commercial Bank"@en,
+        "Ngân hàng TMCP Việt Nam Thịnh Vượng"@vi ;
+    schema:url <https://www.vpbank.com.vn/> .
+
+:isProvidedBy a owl:ObjectProperty ;
+    rdfs:domain :Service ;
+    rdfs:range :Bank ;
+    owl:inverseOf :providesService .
+
+<https://data.example.org/vietnam-banking/linkset/dbpedia> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org/> ;
+    void:subjectsTarget :dataset ;
+    void:triples 12 .
+
+<https://data.example.org/vietnam-banking/linkset/wikidata> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org/> ;
+    void:subjectsTarget :dataset ;
+    void:triples 14 .
+
+<https://data.example.org/vietnam-banking/location/da-nang> a owl:NamedIndividual,
+        :Location ;
+    rdfs:label "Da Nang"@en,
+        "Đà Nẵng"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Da_Nang>,
+        <http://www.wikidata.org/entity/Q25282> .
+
+<https://data.example.org/vietnam-banking/location/vinh> a owl:NamedIndividual,
+        :Location ;
+    rdfs:label "Vinh"@en,
+        "Vinh"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Vinh>,
+        <http://www.wikidata.org/entity/Q194292> .
+
+:nameEn a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range rdf:langString .
+
+:nameVi a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range rdf:langString .
+
+:officialWebsite a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range xsd:anyURI .
+
+:retrievedDate a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range xsd:date .
+
+<http://dbpedia.org/> a void:Dataset ;
+    rdfs:label "DBpedia"@en .
+
+<http://dbpedia.org/resource/Agribank_(Vietnam)> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Asia_Commercial_Bank> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Bank_for_Investment_and_Development_of_Vietnam> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Da_Nang> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Hanoi> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Ho_Chi_Minh_City> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Orient_Commercial_Joint_Stock_Bank> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Techcombank> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Vietcombank> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Vietinbank> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Vietnam> a owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Vinh> a owl:NamedIndividual .
+
+xsd:date a rdfs:Datatype .
+
+<http://www.wikidata.org/> a void:Dataset ;
+    rdfs:label "Wikidata"@en .
+
+<http://www.wikidata.org/entity/Q1003180> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q10541776> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q124465825> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q1854> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q1858> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q1924723> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q194292> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q25282> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q6122995> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q6123772> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q7102288> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q727019> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q7928459> a owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q881> a owl:NamedIndividual .
+
+<https://data.example.org/vietnam-banking/bank-type/private-domestic-commercial> a owl:NamedIndividual,
+        :BankType ;
+    rdfs:label "Privately owned domestic commercial bank"@en,
+        "Ngân hàng thương mại trong nước thuộc sở hữu tư nhân"@vi .
+
+:bankId a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range xsd:string .
+
+:foundedYear a owl:DatatypeProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range xsd:integer .
+
+:hasHeadquarters a owl:ObjectProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range :Location ;
+    owl:inverseOf :isHeadquartersOf .
+
+:isHeadquartersOf a owl:ObjectProperty ;
+    rdfs:domain :Location ;
+    rdfs:range :Bank .
+
+:operatesInCountry a owl:ObjectProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range :Location .
+
+<https://data.example.org/vietnam-banking/service/development-finance> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Development finance"@en,
+        "Tín dụng đầu tư phát triển"@vi .
+
+<https://data.example.org/vietnam-banking/service/policy-lending> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Policy lending"@en,
+        "Tín dụng chính sách"@vi .
+
+schema:BankOrCreditUnion a owl:Class .
+
+<https://data.example.org/vietnam-banking/bank-type/foreign-owned> a owl:NamedIndividual,
+        :BankType ;
+    rdfs:label "Wholly foreign-owned bank"@en,
+        "Ngân hàng 100% vốn nước ngoài"@vi .
+
+<https://data.example.org/vietnam-banking/bank-type/policy-bank> a owl:NamedIndividual,
+        :BankType ;
+    rdfs:label "Policy bank"@en,
+        "Ngân hàng chính sách"@vi .
+
+:dataset a void:Dataset ;
+    dcterms:description "Linked Open Data dataset describing Vietnamese banks, bank types, locations and banking services."@en ;
+    dcterms:modified "2026-10-08"^^xsd:date ;
+    dcterms:title "Vietnam Banking Linked Open Data"@en,
+        "Dữ liệu mở liên kết ngân hàng Việt Nam"@vi ;
+    void:triples 1020 .
+
+:providesService a owl:ObjectProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range :Service .
+
+:hasBankType a owl:ObjectProperty ;
+    rdfs:domain :Bank ;
+    rdfs:range :BankType .
+
+<https://data.example.org/vietnam-banking/bank-type/state-commercial> a owl:NamedIndividual,
+        :BankType ;
+    rdfs:label "State-owned or state-controlled commercial bank"@en,
+        "Ngân hàng thương mại nhà nước/chi phối"@vi .
+
+:BankType a owl:Class .
+
+<https://data.example.org/vietnam-banking/location/ho-chi-minh-city> a owl:NamedIndividual,
+        :Location ;
+    rdfs:label "Ho Chi Minh City"@en,
+        "Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Ho_Chi_Minh_City>,
+        <http://www.wikidata.org/entity/Q1854> .
+
+:Location a owl:Class .
+
+:Service a owl:Class .
+
+<https://data.example.org/vietnam-banking/location/hanoi> a owl:NamedIndividual,
+        :Location ;
+    rdfs:label "Hanoi"@en,
+        "Hà Nội"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Hanoi>,
+        <http://www.wikidata.org/entity/Q1858> .
+
+<https://data.example.org/vietnam-banking/bank-type/joint-stock-commercial> a owl:NamedIndividual,
+        :BankType ;
+    rdfs:label "Joint-stock commercial bank"@en,
+        "Ngân hàng thương mại cổ phần"@vi .
+
+<https://data.example.org/vietnam-banking/service/card> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Card services"@en,
+        "Thẻ ngân hàng"@vi .
+
+<https://data.example.org/vietnam-banking/service/retail-loan> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Retail lending"@en,
+        "Cho vay bán lẻ"@vi .
+
+<https://data.example.org/vietnam-banking/service/corporate-banking> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Corporate banking"@en,
+        "Ngân hàng doanh nghiệp"@vi .
+
+<https://data.example.org/vietnam-banking/service/deposit-savings> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Deposits and savings"@en,
+        "Tiền gửi và tiết kiệm"@vi .
+
+<https://data.example.org/vietnam-banking/service/digital-banking> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Digital banking"@en,
+        "Ngân hàng số"@vi .
+
+<https://data.example.org/vietnam-banking/service/payment-transfer> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Payments and transfers"@en,
+        "Thanh toán và chuyển tiền"@vi .
+
+<https://data.example.org/vietnam-banking/service/trade-finance> a owl:NamedIndividual,
+        :Service ;
+    rdfs:label "Trade finance"@en,
+        "Tài trợ thương mại"@vi .
+
+<https://data.example.org/vietnam-banking/location/vietnam> a owl:NamedIndividual,
+        :Location ;
+    rdfs:label "Vietnam"@en,
+        "Việt Nam"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Vietnam>,
+        <http://www.wikidata.org/entity/Q881> .
+
+:Bank a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :operatesInCountry ;
+            owl:someValuesFrom :Location ],
+        [ a owl:Restriction ;
+            owl:onProperty :providesService ;
+            owl:someValuesFrom :Service ],
+        [ a owl:Restriction ;
+            owl:onClass :BankType ;
+            owl:onProperty :hasBankType ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass :Location ;
+            owl:onProperty :hasHeadquarters ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty :bankId ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        schema:BankOrCreditUnion ;
+    owl:disjointWith :BankType,
+        :Location,
+        :Service .
+
